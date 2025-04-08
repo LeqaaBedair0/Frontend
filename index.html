@@ -3,64 +3,142 @@
 <!-- use plaintext then ctrl+k+c to do comment -->
 <!-- use plaintext then ctrl+k+u to uncomment -->
 <html lang="en">
-  <!-- to default the language of the website-->
+<!-- to default the language of the website-->
 
-  <head>
-    <meta charset="UTF-8" />
-    <!-- to cover all the characters of the words-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- to make the web fit on th device -->
-    <title>Get to know me</title>
-    <!-- to default ur title of the bar -->
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <!-- to cover all the characters of the words-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- to make the web fit on th device -->
+  <title>Get to know me</title>
+  <!-- to default ur title of the bar -->
+</head>
 
-  <body>
-    <h1>Hi, my name is Leqaa Bedair</h1>
-    <!-- to display the title of the page -->
-    <label> My age : 20 years old </label>
-    <br />
-    <!-- to make new line between labels -->
-    <label> Nationality : Egyptian </label>
-    <br />
-    <label> Living in : Savona , Italy </label>
-    <p>I am learning frontend development</p>
-    <!-- to display the paragraph of the page -->
-    <ul>
-      <li>💻 HTML</li>
-      <li>🎨 CSS</li>
-      <li>⚙️ JavaScript</li>
-    </ul>
+<body>
+  <h1>Hi, my name is Leqaa Bedair</h1>
+  <!-- to display the title of the page -->
+  <label> My age : 20 years old </label>
+  <br />
+  <!-- to make new line between labels -->
+  <label> Nationality : Egyptian </label>
+  <br />
+  <label> Living in : Savona , Italy </label>
+  <p>I am learning frontend development</p>
+  <!-- to display the paragraph of the page -->
+
+  <!-- to do unordered html list // use ol for ordered list by type A or i or 1 -->
+  <!-- use li*number to do more than one -->
+  <ul style="list-style-type: circle;">
+    <li>💻 HTML</li>
+    <li>🎨 CSS</li>
+    <li>⚙️ JavaScript</li>
+  </ul>
+  <!-- to do discribe something  -->
+  <!-- 
+  <dl>
+    <dt>html</dt>
+    <dd>Programming language </dd>
+  </dl> 
+  -->
+
+
+  <!-- to do a table for dataset -->
+  <table border="1" style="width: 200px; color: gray;" bgcolor="white">
+    <caption style="color:black;">
+      Informations
+    </caption>
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jan</td>
+        <td>100$</td>
+      </tr>
+      <tr>
+        <td>Jun</td>
+        <td>500$</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Content</td>
+      </tr>
+    </tfoot>
+
+  </table>
 
   <p>
     <a href="mailto:leqaaahmed22722@gmail.com"> For sending mail </a>
     <!-- adding email to the website -->
     <br>
-    <a href="namefiletobedownloaded.pdf" download>Download PDF </a> 
+    <a href="namefiletobedownloaded.pdf" download>Download PDF </a>
     <!-- to make user download file -->
+    <!-- used for adding link to another page"for ads" -->
+    
   </p>
-
-  <input type="text" placeholder="Let me know your name " required value="My name" /> 
-  <input type="email" placeholder="Your email " required value="userexample@gmail.com" /> 
-   <!-- to add text box to the website / add readonly if u want -->
-  <button>Submit</button>
-
   
+
+  <!-- use iframe for adding link of another page // use a to open the link in the same frame "for ads" -->
+  <!-- <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe example">    
+  </iframe>
+  <p>
+    <a href="https://www.w3schools.com" target="iframe_a"> w3schools.com </a> 
+      
+  </p> -->
+
+  <form>
+    <!-- to add text box to the website / add readonly if u want -->
+    <h2>Register</h2>
+    <label>First name: </label> <br>
+    <input type="text" required placeholder="please type your first name "> <br>
+    <label>Last name: </label> <br>
+    <input type="text" required placeholder="please type your last name "> <br>
+    <label>Email : </label> <br>
+    <input type="email" required placeholder="please type your email "> <br>
+    <label>Password: </label> <br>
+    <input type="password" required placeholder="please type new password "> <br>
+    <label>Confirm password: </label> <br>
+    <input type="password" required placeholder="please confirm the password "> <br>
+    <label>Gender: </label> <br>
+    <input type="radio" required placeholder="please select your gender " name="gender"> <label>Male</label>
+    <input type="radio" required placeholder="please select your gender " name="gender"> <label>Female</label> <br>
+    <br>
+    <input type="submit" value="Submit"> <br>
+
+
+  </form>
+
+
   <br>
   <br>
-  <input type="file"/>
+  <input type="file" />
   <button>Upload</button>
   <!-- to make the user choose file to be uploaded -->
 
   </p>
+
+  
+
+
+
 
 
   <button onclick="document.location='default.html'">
     go to default page <!-- to add button to the website JS -->
   </button>
   <br>
-  
 
-  
-    
-  </body>
+
+
+
+
+
+
+
+</body>
+
 </html>
