@@ -53,6 +53,7 @@
         <th>Salary</th>
       </tr>
     </thead>
+
     <tbody>
       <tr>
         <td>Jan</td>
@@ -71,16 +72,6 @@
 
   </table>
 
-  <p>
-    <a href="mailto:leqaaahmed22722@gmail.com"> For sending mail </a>
-    <!-- adding email to the website -->
-    <br>
-    <a href="namefiletobedownloaded.pdf" download>Download PDF </a>
-    <!-- to make user download file -->
-    <!-- used for adding link to another page"for ads" -->
-    
-  </p>
-  
 
   <!-- use iframe for adding link of another page // use a to open the link in the same frame "for ads" -->
   <!-- <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe example">    
@@ -91,23 +82,64 @@
   </p> -->
 
   <form>
+    <!-- using for to send elements to server action="/action_page.php" -->
+    <!-- use fieldset to make the form more organized as container  -->
+    <fieldset>
+      <legend>Register</legend>
     <!-- to add text box to the website / add readonly if u want -->
-    <h2>Register</h2>
-    <label>First name: </label> <br>
-    <input type="text" required placeholder="please type your first name "> <br>
-    <label>Last name: </label> <br>
-    <input type="text" required placeholder="please type your last name "> <br>
-    <label>Email : </label> <br>
-    <input type="email" required placeholder="please type your email "> <br>
-    <label>Password: </label> <br>
-    <input type="password" required placeholder="please type new password "> <br>
-    <label>Confirm password: </label> <br>
-    <input type="password" required placeholder="please confirm the password "> <br>
-    <label>Gender: </label> <br>
-    <input type="radio" required placeholder="please select your gender " name="gender"> <label>Male</label>
+    <label for="fname">First name: </label> <br>
+    <input type="text" id="fname" name="fname" required placeholder="please type your first name "> <br>
+    <label for="lname">Last name: </label> <br>
+    <input type="text" id="lname" name="lname" required placeholder="please type your last name "> <br>
+    <label for="email">Email : </label> <br>
+    <input type="email" id="email" name="email" required placeholder="please type your email "> <br>
+    <label for="pass">Password: </label> <br>
+    <input type="password" id="pass" name="pass" required placeholder="please type new password "> <br>
+    <label for="passw">Confirm password: </label> <br>
+    <input type="password" id="passw" name="passw" required placeholder="please confirm the password "> <br> <br>
+
+    <!-- to radio gender to the website -->
+    <label for="gender">Gender: </label> <br>
+    <input type="radio" required placeholder="please select your gender " name="gender"> <label>Male</label> <br>
     <input type="radio" required placeholder="please select your gender " name="gender"> <label>Female</label> <br>
     <br>
-    <input type="submit" value="Submit"> <br>
+
+    <!-- to add select box to the website -->
+    <label for="age">Age range </label> <br>
+    <select name="age" id="age" size="1">
+      <option value="0" selected disabled>Select age</option>
+      <option value="1">Less than 18 </option>
+      <option value="2">Between 18 and 40</option>
+      <option value="3">More than 40 </option>
+    </select>
+    <br> <br>
+    <!-- to add date chooser to the website -->
+    <label for="birth">Date of Birth</label> <br>
+    <input type="date" id="birth" name="birth" placeholder="yyyy-mm-dd" required>
+    <br> <br>
+
+    <!-- to add select box can search in about things to the website -->
+    <label for="course"> Choose your course </label> <br>
+    <input type="text" list="course" name="course">
+    <datalist id="course">
+      <option value="HTML">
+      <option value="CSS">
+      <option value="JavaScript">
+      <option value="Python">
+      <option value="Java">
+    </datalist>
+
+    <br>  <br>
+    <!-- to make the user choose file to be uploaded -->
+    <input type="file" />
+    <button>Upload</button>
+    
+    <!-- to add button to the website -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+    <br>
+    </fieldset>
+
 
 
   </form>
@@ -115,22 +147,41 @@
 
   <br>
   <br>
-  <input type="file" />
-  <button>Upload</button>
-  <!-- to make the user choose file to be uploaded -->
+  
 
   </p>
 
-  
+  <!-- to add textarea so the user can write in it -->
+  <h2>Feedback</h2>
+  <p>Share with me your experience</p>
+  <form>
+    <textarea name="message" rows="4" cols="20"> Free space for you </textarea>
+    <input type="submit" value="Submit">
+  </form>
 
-
-
-
-
+  <br>
   <button onclick="document.location='default.html'">
     go to default page <!-- to add button to the website JS -->
   </button>
   <br>
+
+  <p>
+    <!-- adding email to the website -->
+    <a href="mailto:leqaaahmed22722@gmail.com"> For sending mail </a>
+    <br>
+
+    <!-- to make user download file -->
+    <a href="namefiletobedownloaded.pdf" download>Download PDF </a>
+    
+
+  </p>
+
+  <!-- to add button that opens in the start of page containing a message  -->
+  <button type="button" style="width: auto; color: black; background-color: green;"
+    onclick="alert('See you next time')">
+    Click me
+
+  </button>
 
 
 
