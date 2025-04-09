@@ -1,4 +1,7 @@
-<!DOCTYPE html> <!-- to html file to browser-->
+<!DOCTYPE html>
+<!-- to html file to browser-->
+<!-- use plaintext then ctrl+k+c to do comment -->
+<!-- use plaintext then ctrl+k+u to uncomment -->
 <html lang="en">
 <!-- to default the language of the website-->
 
@@ -9,26 +12,254 @@
   <!-- to make the web fit on th device -->
   <title>Get to know me</title>
   <!-- to default ur title of the bar -->
+
+  <!-- start styling with css -->
+  <link rel="stylesheet" href="/first/pages/css/styling.css">
+  <style>
+    /* all label  will be styled the same  */
+    label {
+      color: rgb(32, 34, 36);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    /* all object of the body will be styled the same except the overloded */
+    body {
+      background-color: rgb(175, 166, 166);
+      color: rgb(0, 0, 0);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+    }
+
+    /* stlye same h1different line use class */
+    .myClass {
+      background-color: rgb(97, 88, 88); 
+      color: rgb(151, 123, 143);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+    }
+
+    /* stlye unique object use id */
+    #myId {
+      background-color: rgb(97, 88, 88); 
+      color: rgb(151, 123, 143);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 30px;
+    }
+
+    /* styling all labels with the same style  */
+    .newclass{ 
+      color: rgb(151, 123, 143);
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+    }
+
+    /* takes all input with this style */
+    input[type]{
+      color: rgb(85, 35, 72);
+      border: 2px dashed ;
+    }
+
+    input[type="checkbox"] :checked {
+      width: 13px;
+      height: 13px;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Hi, my name is Leqaa Bedair</h1>
+  <!-- to start the body of the page -->
+  <!-- to style h1 with overload -->
+  <h1 class="myClass">Hi, my name is Leqaa Bedair</h1>
   <!-- to display the title of the page -->
-  <label> My age : 20 years old </label>
+  <label class="newclass"> Age : 20 years old </label>
   <br />
   <!-- to make new line between labels -->
-  <label> Nationality : Egyptian </label>
+  <label class="newclass"> Nationality : Egyptian </label>
   <br />
-  <label> Living in : Savona , Italy </label>
-  <br />
-  <label> Contact : leqaaahmed22722@gmail.com </label>
+  <label class="newclass"> Living in : Savona , Italy </label>
   <p>I am learning frontend development</p>
   <!-- to display the paragraph of the page -->
-  <ul>
+
+  <!-- to do unordered html list // use ol for ordered list by type A or i or 1 -->
+  <!-- use li*number to do more than one -->
+  <ul style="list-style-type: circle;">
     <li>💻 HTML</li>
     <li>🎨 CSS</li>
     <li>⚙️ JavaScript</li>
   </ul>
+  <!-- to do discribe something  -->
+  <!-- 
+  <dl>
+    <dt>html</dt>
+    <dd>Programming language </dd>
+  </dl> 
+  -->
+
+
+  <!-- to do a table for dataset -->
+  <table border="1" style="width: 200px; color: gray;" bgcolor="white">
+    <caption style="color:black;">
+      Informations
+    </caption>
+    <thead>
+      <tr>
+        <th>Month</th>
+        <th>Salary</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>Jan</td>
+        <td>100$</td>
+      </tr>
+      <tr>
+        <td>Jun</td>
+        <td>500$</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2">Content</td>
+      </tr>
+    </tfoot>
+
+  </table>
+
+
+  <!-- use iframe for adding link of another page // use a to open the link in the same frame "for ads" -->
+  <!-- <iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe example">    
+  </iframe>
+  <p>
+    <a href="https://www.w3schools.com" target="iframe_a"> w3schools.com </a> 
+      
+  </p> -->
+  <!-- add div for better styling -->
+  <div style="margin: auto; padding: 1;">
+    <form>
+      <!-- using for to send elements to server action="/action_page.php" -->
+      <!-- use fieldset to make the form more organized as container  -->
+      <fieldset style="background-color: rgb(121, 111, 111);">
+        <legend style="font-size: large; color:rgb(32, 34, 36);">Register</legend>
+        <!-- to add text box to the website / add readonly if u want -->
+        <label for="fname">First name: </label> <br>
+        <input type="text" id="fname" name="fname" required placeholder="please type your first name "> <br>
+        <label for="lname">Last name: </label> <br>
+        <input type="text" id="lname" name="lname" required placeholder="please type your last name "> <br>
+        <label for="email">Email : </label> <br>
+        <input type="email" id="email" name="email" required placeholder="please type your email "> <br>
+        <label for="pass">Password: </label> <br>
+        <input type="password" id="pass" name="pass" required placeholder="please type new password " minlength="8"
+          maxlength="16"> <br>
+        <label for="passw">Confirm password: </label> <br>
+        <input type="password" id="passw" name="passw" required placeholder="please confirm the password "> <br> <br>
+  
+        <!-- to radio gender to the website -->
+        <label for="gender">Gender: </label> <br>
+        <input type="radio" required placeholder="please select your gender " name="gender"> <label>Male</label> <br>
+        <input type="radio" required placeholder="please select your gender " name="gender"> <label>Female</label> <br>
+        <br>
+  
+        <!-- to add select box to the website -->
+        <label for="age">Age range </label> <br>
+        <select name="age" id="age" size="1">
+          <option value="0" selected disabled>Select age</option>
+          <option value="1">Less than 18 </option>
+          <option value="2">Between 18 and 40</option>
+          <option value="3">More than 40 </option>
+        </select>
+        <br> <br>
+        <!-- to add date chooser to the website -->
+        <label for="birth">Date of Birth</label> <br>
+        <input type="date" id="birth" name="birth" placeholder="yyyy-mm-dd" required>
+        <br> <br>
+  
+        <!-- to add select box can search in about things to the website -->
+        <label for="course"> Choose your course </label> <br>
+        <input type="text" list="course" name="course">
+        <datalist id="course">
+          <option value="HTML">
+          <option value="CSS">
+          <option value="JavaScript">
+          <option value="Python">
+          <option value="Java">
+        </datalist>
+  
+        <br> <br>
+        <!-- to make the user choose file to be uploaded -->
+        <input type="file" />
+        <button style="color:  rgb(85, 35, 72); border: 2px dashed ; ">Upload</button>
+  
+        <!-- to add button to the website -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <br>
+      </fieldset>
+  
+  
+  
+    </form>
+  </div>
+
+
+  <br>
+  <br>
+
+
+  </p>
+
+  <!-- to add textarea so the user can write in it -->
+  <h2 id="myId">Feedback</h2>
+  <p>Share with me your experience</p>
+  <form>
+    <textarea name="message" rows="4" cols="20"> Free space for you </textarea>
+    <input type="submit" value="Submit">
+  </form>
+
+  <label>What's your favourite?</label> <br>
+  <label for="check1"> Movies </label> 
+  <input type="checkbox" name="check1" id="check1"> 
+  <label for="check2"> Music </label> 
+  <input type="checkbox" name="check2" id="check2">
+  
+  
+
+  <br> <br> 
+
+  <button onclick="document.location='/first/pages/default.html'">
+    go to default page <!-- to add button to the website JS -->
+  </button>
+  <br>
+
+  <p>
+    <!-- adding email to the website -->
+    <a href="mailto:leqaaahmed22722@gmail.com"> For sending mail </a>
+    <br>
+
+    <!-- to make user download file -->
+    <a href="namefiletobedownloaded.pdf" download>Download PDF </a>
+
+
+  </p>
+
+  <!-- to add button that opens in the start of page containing a message  -->
+  <button type="button" style="width: auto; color: black; background-color: green;"
+    onclick="alert('See you next time')">
+    Click me
+
+  </button>
+
+
+
+
+
+
+
 
 </body>
 
