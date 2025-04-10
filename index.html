@@ -2,10 +2,13 @@
 <!-- to html file to browser-->
 <!-- use plaintext then ctrl+k+c to do comment -->
 <!-- use plaintext then ctrl+k+u to uncomment -->
+<!-- use ctrl+f to find  -->
+<!-- use ctrl+h to find and replace  -->
 <html lang="en">
 <!-- to default the language of the website-->
 
 <head>
+
   <meta charset="UTF-8" />
   <!-- to cover all the characters of the words-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,25 +19,53 @@
   <!-- start styling with css -->
   <link rel="stylesheet" href="/first/pages/css/styling.css">
   <style>
+    .info-table {
+      width: 300px;
+      border-collapse: collapse;
+      background-color: #fff;
+      color: #333;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-table caption {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 8px;
+    }
+
+    .info-table th,
+    .info-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .info-table th {
+      background-color: #f4f4f4;
+      color: #000;
+    }
+
+    .info-table tfoot {
+      background-color: #f9f9f9;
+      font-style: italic;
+    }
+
     /* all label  will be styled the same  */
     label {
       color: rgb(32, 34, 36);
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 15px;
-    }
-
-    /* all object of the body will be styled the same except the overloded */
-    body {
-      background-color: rgb(175, 166, 166);
-      color: rgb(0, 0, 0);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 15px;
+      line-height: 1.5;
+      /* text-decoration: line-through; //use it when u want to show the user that something been edited /shopping */
     }
 
     /* stlye same h1different line use class */
     .myClass {
-      background-color: rgb(97, 88, 88); 
+      background-color: rgb(97, 88, 88);
       color: rgb(151, 123, 143);
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
@@ -43,7 +74,7 @@
 
     /* stlye unique object use id */
     #myId {
-      background-color: rgb(97, 88, 88); 
+      background-color: rgb(97, 88, 88);
       color: rgb(151, 123, 143);
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
@@ -51,7 +82,7 @@
     }
 
     /* styling all labels with the same style  */
-    .newclass{ 
+    .newclass {
       color: rgb(151, 123, 143);
       text-align: center;
       font-family: Arial, Helvetica, sans-serif;
@@ -59,9 +90,9 @@
     }
 
     /* takes all input with this style */
-    input[type]{
+    input[type] {
       color: rgb(85, 35, 72);
-      border: 2px dashed ;
+      border: 2px dashed;
     }
 
     input[type="checkbox"] :checked {
@@ -72,6 +103,7 @@
 </head>
 
 <body>
+
   <!-- to start the body of the page -->
   <!-- to style h1 with overload -->
   <h1 class="myClass">Hi, my name is Leqaa Bedair</h1>
@@ -102,34 +134,31 @@
 
 
   <!-- to do a table for dataset -->
-  <table border="1" style="width: 200px; color: gray;" bgcolor="white">
-    <caption style="color:black;">
-      Informations
-    </caption>
+  <table class="info-table">
+    <caption>Salary Information</caption>
     <thead>
       <tr>
         <th>Month</th>
         <th>Salary</th>
       </tr>
     </thead>
-
     <tbody>
       <tr>
-        <td>Jan</td>
-        <td>100$</td>
+        <td>January</td>
+        <td>$100</td>
       </tr>
       <tr>
-        <td>Jun</td>
-        <td>500$</td>
+        <td>June</td>
+        <td>$500</td>
       </tr>
     </tbody>
     <tfoot>
       <tr>
-        <td colspan="2">Content</td>
+        <td colspan="2">Summary: Mid-Year Earnings</td>
       </tr>
     </tfoot>
-
   </table>
+
 
 
   <!-- use iframe for adding link of another page // use a to open the link in the same frame "for ads" -->
@@ -158,13 +187,13 @@
           maxlength="16"> <br>
         <label for="passw">Confirm password: </label> <br>
         <input type="password" id="passw" name="passw" required placeholder="please confirm the password "> <br> <br>
-  
+
         <!-- to radio gender to the website -->
         <label for="gender">Gender: </label> <br>
         <input type="radio" required placeholder="please select your gender " name="gender"> <label>Male</label> <br>
         <input type="radio" required placeholder="please select your gender " name="gender"> <label>Female</label> <br>
         <br>
-  
+
         <!-- to add select box to the website -->
         <label for="age">Age range </label> <br>
         <select name="age" id="age" size="1">
@@ -178,7 +207,7 @@
         <label for="birth">Date of Birth</label> <br>
         <input type="date" id="birth" name="birth" placeholder="yyyy-mm-dd" required>
         <br> <br>
-  
+
         <!-- to add select box can search in about things to the website -->
         <label for="course"> Choose your course </label> <br>
         <input type="text" list="course" name="course">
@@ -189,20 +218,20 @@
           <option value="Python">
           <option value="Java">
         </datalist>
-  
+
         <br> <br>
         <!-- to make the user choose file to be uploaded -->
         <input type="file" />
         <button style="color:  rgb(85, 35, 72); border: 2px dashed ; ">Upload</button>
-  
+
         <!-- to add button to the website -->
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
         <br>
       </fieldset>
-  
-  
-  
+
+
+
     </form>
   </div>
 
@@ -214,25 +243,29 @@
   </p>
 
   <!-- to add textarea so the user can write in it -->
-  <h2 id="myId">Feedback</h2>
+  <strong id="myId"> Feedback </strong>
+  <!-- to make the font bold by default -->
   <p>Share with me your experience</p>
   <form>
     <textarea name="message" rows="4" cols="20"> Free space for you </textarea>
     <input type="submit" value="Submit">
   </form>
 
+
+  <!-- to add checkbox to the website -->
   <label>What's your favourite?</label> <br>
-  <label for="check1"> Movies </label> 
-  <input type="checkbox" name="check1" id="check1"> 
-  <label for="check2"> Music </label> 
+  <label for="check1"> Movies </label>
+  <input type="checkbox" name="check1" id="check1">
+  <label for="check2"> Music </label>
   <input type="checkbox" name="check2" id="check2">
-  
-  
 
-  <br> <br> 
 
+
+  <br> <br>
+
+  <!-- to add button that moves u to another page -->
   <button onclick="document.location='/first/pages/default.html'">
-    go to default page <!-- to add button to the website JS -->
+    go to default page
   </button>
   <br>
 
@@ -247,12 +280,15 @@
 
   </p>
 
-  <!-- to add button that opens in the start of page containing a message  -->
-  <button type="button" style="width: auto; color: black; background-color: green;"
+  <!-- to add button that opens in the head of page containing a message  -->
+  <button type="button" style="width: auto; color: black; background-color: rgb(104, 59, 98);"
     onclick="alert('See you next time')">
     Click me
 
   </button>
+
+
+
 
 
 
